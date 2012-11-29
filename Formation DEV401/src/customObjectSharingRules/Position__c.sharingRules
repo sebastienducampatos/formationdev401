@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectSharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <criteriaBasedRules>
+        <fullName>View_Closed_Positions</fullName>
+        <sharedTo>
+            <role>Recruiter</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <accessLevel>Read</accessLevel>
+        <name>View Closed Positions</name>
+    </criteriaBasedRules>
+    <criteriaBasedRules>
+        <fullName>View_Opened_Positions</fullName>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open,New</value>
+        </criteriaItems>
+        <accessLevel>Read</accessLevel>
+        <name>View Opened Positions</name>
+    </criteriaBasedRules>
+    <ownerRules>
+        <fullName>VP_Human_Ressources_Rule</fullName>
+        <sharedTo>
+            <roleAndSubordinates>VPHumanResources</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+        <accessLevel>Edit</accessLevel>
+        <name>VP Human Ressources Rule</name>
+    </ownerRules>
+</CustomObjectSharingRules>
